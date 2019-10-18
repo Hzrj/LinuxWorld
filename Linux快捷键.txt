@@ -1,0 +1,76 @@
+ 			最简单的Linux命令
+创建文件 	touch file	touch是一个命令
+进入一个目录 	cd /etc/	cd是一个命令
+查看当前目录	pwd		pwd是一个命令
+输出一条语句	echo "hello shiyanlou" echo是一个命令
+更新系统安装包  sudo apt-get update    一整条命令
+创建多个文件，并用通配符查新结果》
+		touch syl.txt fgd.txt
+		ls *.txt		ls 是查询  *是通配符
+		syl.txt fgd.txt
+一次性创建连续的文件
+		touch love_{1..4}_shiyanlou.txt  一定是两个小点。
+		ls *.txt
+
+结果		syl.txt fgd.txt
+		love_1_shiyanlou.txt 
+		love_2_shiyanlou.txt
+		love_3_shiyanlou.txt
+		love_4_shiyanlou.txt
+
+安装中间件      sudo apt-get install sysvbanner 
+使用banner 	banner zhuangaa
+如何查看当前用户whoami
+新建用户	sudo adduser lilei   	sudo adduser 添加用户的命令  lilei 用户的名字
+删除用户	sudo deluser lilei
+切换用户	su -l lilei
+重新设置用户的密码 sudo passwd shiyanlou
+如何查看自己是哪组的 groups lilei
+给组加权限	sudo usermod -G sudo lilei 
+
+查看文件的权限	ls -l <file name>
+查看文件的大小	ls -in<file name>
+查看所有文件的大小 ls -AsSh	s是显示文件大小 S是按文件大小排序
+
+更变文件拥有者	sudo chown shiyanlou iphone6(前提先登录lilei在切换回来shiyanlou)
+查看拥有者	ll iphone6
+注销用户	Ctrl+d
+查看文件	/etc/group | sort	/etc/group是一条命令， | sort  是要查看的文件名
+          
+5.
+		declare tmp 申明变量
+		tmp=shiyanlou 赋值
+		echo $tmp     $表引用	echo表输出
+创建一个 Shell 脚本文件：
+$ cd /home/shiyanlou
+$ touch hello_shell.sh 创建shell脚本
+$ gedit hello_shell.sh 运行脚本
+----------------------------------------------------------------------------------------------------------------------
+	按键		 作用 
+	Ctrl+d 键盘输入结束或退出终端 
+	Ctrl+s 暂停当前程序，暂停后按下任意键恢复运行 
+	Ctrl+z 将当前程序放到后台运行，恢复到前台为命令fg 
+	Ctrl+a 将光标移至输入行头，相当于Home键 
+	Ctrl+e 将光标移至输入行末，相当于End键 
+	Ctrl+k 删除从光标所在位置到行末 
+	Alt+Backspace 向前删除一个单词 		Shift+PgUp 将终端显示向上滚动 
+	Shift+PgDn 将终端显示向下滚动
+	ls *.txt 模糊查询文件
+
+ 	vi/vim编辑器使用方法详解 
+命令模式→输入模式：
+　　　　　i：在当前光标所在字符的前面，转为输入模式
+　　　　　I：在当前光标所在行的行首转换为输入模式
+　　　　　a：在当前光标所在字符的后面，转为输入模式
+　　　　　A：在光标所在行的行尾，转换为输入模式
+　　　　　o：在当前光标所在行的下方，新建一行，并转为输入模式
+　　　　　O：在当前光标所在行的上方，新建一行，并转为输入模式
+　　　　　s：删除光标所在字符
+　　　　　r：替换光标处字符
+
+
+
+
+
+
+
